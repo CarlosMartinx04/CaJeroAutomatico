@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.cajeroautomatico.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.cajeroautomatico.HelloController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <top>
+        <Label  BorderPane.alignment="CENTER" fx:id="labelBienvenido"  text="Bienvenido"/>
+    </top>
+
+    <center>
+
+        <Label alignment="CENTER"  text="Seleccione la opcion que desea: "/>
+
+    </center>
+
+    <bottom>
+        <HBox spacing="40" alignment="CENTER">
+            <padding>
+                <Insets bottom="30.0"/>
+            </padding>
+            <Button text="Iniciar Sesion"/>
+            <Button text="Registrarse" onAction="#onActionRegistrarse"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
