@@ -30,7 +30,7 @@
             <padding>
                 <Insets bottom="30.0"/>
             </padding>
-            <Button text="Iniciar Sesion"/>
+            <Button text="Iniciar Sesion" onAction="#onActionIniciarSesion"/>
             <Button text="Registrarse" onAction="#onActionRegistrarse"/>
         </HBox>
     </bottom>

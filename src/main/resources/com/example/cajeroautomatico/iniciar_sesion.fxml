@@ -10,8 +10,7 @@
 <?import javafx.scene.control.TextField?>
 <BorderPane xmlns="http://javafx.com/javafx/17.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:id="bpMain"
-            fx:controller="com.example.cajeroautomatico.RegistrarseController">
+            fx:controller="com.example.cajeroautomatico.IniciarSesionController">
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
@@ -20,7 +19,7 @@
 
     <top>
 
-        <Label BorderPane.alignment="CENTER" text="Elige nombre y pin">
+        <Label BorderPane.alignment="CENTER" text="Escribe tu nombre y pin">
             <padding>
                 <Insets bottom="20.0"/>
             </padding>
@@ -49,7 +48,7 @@
                 <Insets bottom="30.0" top="20"/>
             </padding>
             <Button text="Cerrar" onAction="#onActionCerrar"/>
-            <Button text="Registrarse" onAction="#onActionRegistrar"/>
+            <Button text="Iniciar Sesion" onAction="#onActionIniciarSesion"/>
         </HBox>
     </bottom>
 

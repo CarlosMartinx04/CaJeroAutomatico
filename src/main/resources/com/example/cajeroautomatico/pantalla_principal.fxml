@@ -10,46 +10,40 @@
 <?import javafx.scene.control.TextField?>
 <BorderPane xmlns="http://javafx.com/javafx/17.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:id="bpMain"
-            fx:controller="com.example.cajeroautomatico.RegistrarseController">
+            fx:controller="com.example.cajeroautomatico.PrincipalController">
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-
     <top>
-
-        <Label BorderPane.alignment="CENTER" text="Elige nombre y pin">
-            <padding>
-                <Insets bottom="20.0"/>
-            </padding>
-        </Label>
-
+        <Label  BorderPane.alignment="CENTER" text="a" fx:id="labelBienvenido"/>
     </top>
 
     <center>
+
         <VBox spacing="20" alignment="CENTER">
 
             <HBox spacing="15" alignment="CENTER_LEFT">
-                <Label text="Nombre:" prefWidth="80"/>
-                <TextField fx:id="tfNombre" promptText="Nombre" prefWidth="200"/>
+                <Label text="Saldo Actual:" prefWidth="140"/>
+                <Label fx:id="lbSaldoActual" prefWidth="200"/>
             </HBox>
 
             <HBox spacing="15" alignment="CENTER_LEFT">
-                <Label text="PIN:" prefWidth="80"/>
-                <TextField fx:id="tfPin" promptText="PIN" prefWidth="200"/>
+                <Label text="Escribe un saldo:" prefWidth="140"/>
+                <TextField fx:id="lbSaldo" promptText="Saldo" prefWidth="200"/>
             </HBox>
         </VBox>
+
     </center>
 
     <bottom>
         <HBox spacing="40" alignment="CENTER">
             <padding>
-                <Insets bottom="30.0" top="20"/>
+                <Insets bottom="30.0"/>
             </padding>
-            <Button text="Cerrar" onAction="#onActionCerrar"/>
-            <Button text="Registrarse" onAction="#onActionRegistrar"/>
+            <Button text="Agregar"/>
+            <Button text="Retirar"/>
         </HBox>
     </bottom>
 
