@@ -31,20 +31,41 @@
 
             <HBox spacing="15" alignment="CENTER_LEFT">
                 <Label text="Escribe un saldo:" prefWidth="140"/>
-                <TextField fx:id="lbSaldo" promptText="Saldo" prefWidth="200"/>
+                <TextField fx:id="tfSaldo" promptText="Saldo" prefWidth="200"/>
             </HBox>
         </VBox>
 
     </center>
 
     <bottom>
-        <HBox spacing="40" alignment="CENTER">
-            <padding>
-                <Insets bottom="30.0"/>
-            </padding>
-            <Button text="Agregar"/>
-            <Button text="Retirar"/>
-        </HBox>
+        <VBox>
+            <HBox spacing="40" alignment="CENTER">
+                <padding>
+                    <Insets bottom="30.0"/>
+                </padding>
+                <Button text="Agregar" onAction="#onActionAgregar"/>
+                <Button text="Retirar" onAction="#onActionRetirar"/>
+
+            </HBox>
+
+            <HBox alignment="CENTER">
+                <Button prefWidth="200" text="Transferir a otra cuenta" onAction="#onActionTransferir"/>
+            </HBox>
+
+            <VBox fx:id="panelExpandido" visible="false">
+
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <Label text="Escribe un saldo:" prefWidth="140"/>
+                    <TextField fx:id="tfSaldoTransferir" promptText="SaldoTransferir" prefWidth="200"/>
+                    <Button fx:id="btTransferir" text="Transferir"/>
+                </HBox>
+
+            </VBox>
+
+        </VBox>
+
+
+
     </bottom>
 
 </BorderPane>

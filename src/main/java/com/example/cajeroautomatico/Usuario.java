@@ -45,4 +45,8 @@ public class Usuario {
     public String getSaldo() {
         return String.valueOf(Saldo);
     }
+
+    public void setSaldo(double saldo) {
+        Saldo = saldo;
+    }
 }

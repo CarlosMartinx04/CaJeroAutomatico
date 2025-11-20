@@ -37,10 +37,13 @@ public class RegistrarseController{
     @FXML
     private void onActionRegistrar(){
         Usuario usuario = new Usuario(tfNombre.getText(), tfPin.getText(), 0);
-
         if (!usuarios.containsKey(tfNombre.getText())) {
             usuarios.put(tfNombre.getText(), usuario);
             System.out.println("Usuario "+tfNombre.getText()+" agregado correctamente");
+            Window ventana = tfPin.getScene().getWindow();
+            if (ventana instanceof Stage stg){
+                stg.close();
+            }
         }
     }
 
