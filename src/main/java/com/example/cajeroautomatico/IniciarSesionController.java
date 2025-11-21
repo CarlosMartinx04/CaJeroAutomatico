@@ -56,6 +56,10 @@ public class IniciarSesionController {
                 stagePrincipal.setResizable(false);
                 stagePrincipal.setScene(scenePrincipal);
                 stagePrincipal.show();
+                Window window = tfNombre.getScene().getWindow();
+                if (window instanceof Stage stg) {
+                    stg.close();
+                }
             }
         } else {
             System.out.println("No hay usuario con ese nombre.");

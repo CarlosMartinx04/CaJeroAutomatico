@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <BorderPane xmlns="http://javafx.com/javafx/17.0.2"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.cajeroautomatico.PrincipalController">
@@ -17,7 +18,14 @@
     </padding>
 
     <top>
-        <Label  BorderPane.alignment="CENTER" text="a" fx:id="labelBienvenido"/>
+        <BorderPane>
+            <center>
+                <Label text="a" fx:id="labelBienvenido" />
+            </center>
+            <right>
+                <Button text="Cerrar sesión" onAction="#onActionCerrarSesion" />
+            </right>
+        </BorderPane>
     </top>
 
     <center>
@@ -49,15 +57,27 @@
             </HBox>
 
             <HBox alignment="CENTER">
-                <Button prefWidth="200" text="Transferir a otra cuenta" onAction="#onActionTransferir"/>
+                <ToggleButton fx:id="tbExpandir" prefWidth="200" text="Transferir a otra cuenta" onAction="#onActionExpandir"/>
             </HBox>
 
-            <VBox fx:id="panelExpandido" visible="false">
+            <VBox fx:id="panelExpandido" visible="false" >
+
+                <padding>
+                    <Insets top="20.0"/>
+                </padding>
 
                 <HBox spacing="15" alignment="CENTER_LEFT">
-                    <Label text="Escribe un saldo:" prefWidth="140"/>
-                    <TextField fx:id="tfSaldoTransferir" promptText="SaldoTransferir" prefWidth="200"/>
-                    <Button fx:id="btTransferir" text="Transferir"/>
+                    <Label text="Escribe el Usuario" prefWidth="120"/>
+                    <TextField fx:id="tfUsuarioTransferir" promptText="Usuario" prefWidth="120"/>
+                </HBox>
+
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <padding>
+                        <Insets top="5.0"/>
+                    </padding>
+                    <Label text="Escribe un saldo:" prefWidth="120"/>
+                    <TextField fx:id="tfSaldoTransferir" promptText="SaldoTransferir" prefWidth="120"/>
+                    <Button fx:id="btTransferir" text="Transferir" onAction="#onActionTransferir"/>
                 </HBox>
 
             </VBox>
